@@ -47,3 +47,5 @@ Note: The `Analytics Data` screen will not refresh new reports automatically if 
 Basically all the go project does is to spawn channels, write to them which results into a lot of blocked and interrupted threads which according to a response in https://developer.apple.com/forums/thread/124180 leads up to that issue.
 
 I am not familiar with golang at all, it's possible that there are way smarter ways to trigger this issue but I think this demonstration is fairly concise in what it does.
+
+Since the `wakeups_resource` issue won't trigger when ran via Xcode (maybe the WatchDog is disabled during debug sessions?) it will eventually hit a memory shortage but I suppose these issues are unrelated. Feel free to change anything around in the code.
